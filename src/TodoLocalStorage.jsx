@@ -141,7 +141,7 @@ export default function TodoLocalStorage() {
                 <div className="w-[95%] max-w-lg">
                     <ul className="space-y-4">
                         {todos.length === 0 && (
-                            <p className="text-center text-slate-700 mt-10 italic">No tasks yet. Start by adding one above!</p>
+                            <p className="text-center text-blue-200 mt-10 font-medium italic">No tasks yet. Start by adding one above!</p>
                         )}
 
                         {filteredTodos.map(todo => (
