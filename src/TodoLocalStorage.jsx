@@ -43,13 +43,14 @@ export default function TodoLocalStorage() {
     const [todos, dispatch] = useReducer(todoReducer, [], () => {
         const savedTodos = localStorage.getItem("Todos");
         if (savedTodos) return JSON.parse(savedTodos);
+        else return [];
     });
     const [text, setText] = useState('');
     const [editText, setEditText] = useState('');
     const [editId, setEditId] = useState('');
     const [filter, setFilter] = useState('all');
 
-    const filteredTodos = todos.filter(todo => {
+    const filteredTodos = (todos || []).filter(todo => {
         if (filter === 'finished') return todo.done === true;
         if (filter === 'pending') return todo.done === false;
         return true;
