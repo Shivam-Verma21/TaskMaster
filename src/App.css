@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #020024 0%,
+    #0b1f5e 25%,
+    #1f3c88 45%,
+    #1f6fb2 65%,
+    #1597d6 80%,
+    #00d4ff 100%
+  );
+  background-attachment: fixed;
+}
